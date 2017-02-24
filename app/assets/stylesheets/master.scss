@@ -26,3 +26,12 @@ body {
   background: image_url('green_cup.png');
   box-shadow: 0px 2px 4px #000000;
 }
+
+.navbar-inverse .navbar-brand {
+  color: #8C4242;
+  /*font-family: "Helvetica Neue", Helvetica, sans-serif;*/
+  /*font-weight: 600;*/
+  /*letter-spacing: -0.3px;*/
+  font-family: 'riffic_mediumbold', sans-serif;
+  font-size: 26px;
+}
