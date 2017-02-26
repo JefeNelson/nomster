@@ -4,12 +4,13 @@
     <h1><%= place.name %></h1>
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
+    
+    <% if place.user.present? %> 
+      <small><%= place.user.email %></small>
+    <% end %>
+
   </div>
 <% end %>
-
-<% if place.user.present? %> 
-  <small><%= place.user.email %></small>
-  <% end %>
 
 <div class="apple_pagination">
   <div class="page_info">
@@ -17,4 +18,5 @@
   </div>
   <%= will_paginate @places, :container => false %>
 </div>
+
 
