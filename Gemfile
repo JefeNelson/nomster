@@ -58,4 +58,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # This is the pagination gem!
 gem 'will_paginate' , '>= 3.1'
 
+# This adds a form onto our page!
 gem 'simple_form'
+
+# We needz to addz iconz
+gem "font-awesome-rails"
