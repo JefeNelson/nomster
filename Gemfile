@@ -63,3 +63,7 @@ gem 'simple_form'
 
 # We needz to addz iconz
 gem "font-awesome-rails"
+
+# A gem for user authentication!
+gem 'devise'
+

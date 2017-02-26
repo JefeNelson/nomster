@@ -31,7 +31,14 @@
   </nav>
   <!--Fancy Navigation Bar(end)-->
 
-    <%= yield %>
+  <% if notice.present? %>
+  <p class="alert alert-info"><%= notice %></p>                   <!--Notification Bar under TopNav-->
+  <% end %>
+  <% if alert.present? %>
+  <p class="alert alert-danger"><%= alert %></p>                  <!--Alert Bar under TopNav-->
+  <% end %>
+  
+  <%= yield %>
 
   </body>
 </html>
