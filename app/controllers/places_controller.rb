@@ -14,6 +14,10 @@ class PlacesController < ApplicationController
       redirect_to root_path
   end
 
+  def show
+    @place = Place.find(params[:id])               # When the link is clicked, this tells the server to look for an ID and info.
+  end
+
   private
 
   def place_params
