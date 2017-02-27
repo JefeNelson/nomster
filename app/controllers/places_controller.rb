@@ -10,8 +10,8 @@ class PlacesController < ApplicationController
   end
 
   def create
-      current_user.places.create(place_params)
-      redirect_to root_path
+    current_user.places.create(place_params)
+    redirect_to root_path
   end
 
   def show
@@ -23,10 +23,16 @@ class PlacesController < ApplicationController
   end
 
   def update
-    @place = Place.find(params[:id]
+    @place = Place.find(params[:id])
     @place.update_attributes(place_params)
     redirect_to root_path
-  end
+    end
+
+  def destroy
+    @place = Place.find(params[:id])
+    @place.destroy
+    redirect_to root_path
+  end  
 
   private
 
