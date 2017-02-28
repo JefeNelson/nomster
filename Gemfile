@@ -67,3 +67,8 @@ gem "font-awesome-rails"
 # A gem for user authentication!
 gem 'devise'
 
+# A gem for geocoordinates
+gem "geocoder"
+
+# A gem for adding values to the ENV on our localhost
+gem "figaro"
