@@ -76,5 +76,5 @@ gem "figaro"
 # A gem for enabling uploading of photos
 gem 'carrierwave', '~> 1.0'
 
-# A gem for resizing photos and Amazon communication
+# A gem for resizing photos and Amazon A3 Storage
 gem "fog"
