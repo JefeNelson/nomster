@@ -7,6 +7,8 @@ class PlacesController < ApplicationController
 
   def new
     @place = Place.new
+    @comment = Comment.new
+    @photo = Photo.new
   end
 
   def create
@@ -21,6 +23,7 @@ class PlacesController < ApplicationController
   def show
     @place = Place.find(params[:id])               # When the link is clicked, this tells the server to look for an ID and info.
     @comment = Comment.new
+    @photo = Photo.new
   end
 
   def edit
