@@ -72,3 +72,6 @@ gem "geocoder"
 
 # A gem for adding values to the ENV on our localhost
 gem "figaro"
+
+# A gem for enabling uploading of photos
+gem 'carrierwave', '~> 1.0'
