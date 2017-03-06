@@ -1,3 +1,14 @@
+
+  <% @places.each do |place| %>
+    <div class="index-photo">
+        <% place.photos.each do |photo| %>
+              <%= image_tag photo.picture, class: "small-photo" %>
+        <% end %>
+    </div>
+  <% end %>
+
+<br class="clear">
+
 <% @places.each do |place| %>
 
   <div class="booyah-box col-10 offset-1">
@@ -22,6 +33,7 @@
     <% end %>
 
   </div>
+
 <% end %>
 
   <div class="apple_pagination">
