@@ -6,21 +6,21 @@
     </ol>
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">
-        <%= image_tag '1.jpg', class: 'img-fluid' %>  <!-- This class makes the image fluid-->
+        <%= image_tag '1.jpg', class: 'img-fluid' %>
         <div class="carousel-caption">
-        We're just getting started...
+        Explore new places...
         </div>
       </div>
       <div class="carousel-item">
         <%= image_tag '2.jpg', class: 'img-fluid' %>
         <div class="carousel-caption">
-        A new fresh...
+        Refine your palette...
         </div>
       </div>
       <div class="carousel-item">
         <%= image_tag '3.jpg', class: 'img-fluid' %>
         <div class="carousel-caption">
-        Are you ready to eat?
+        Get ready to eat...
         </div>
       </div>
     </div>
@@ -35,19 +35,9 @@
     </a>
   </div>
 
-  <% @places.each do |place| %>
-    <div class="index-photo">
-        <% place.photos.each do |photo| %>
-              <%= image_tag photo.picture, class: "small-photo" %>
-        <% end %>
-    </div>
-  <% end %>
-
 <br class="clear">
 
-
 <% @places.each do |place| %>
-
   <div class="booyah-box col-10 offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1>
     <i><%= place.address %></i><br /><br />
@@ -69,6 +59,9 @@
       </div>
     <% end %>
 
+    <% if place.photos.present? %>
+      <%= image_tag place.photos.last.picture %>
+    <% end %>
   </div>
 
 <% end %>
